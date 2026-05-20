@@ -1,12 +1,15 @@
-# Universal Cart Merchant Gate MCP
+# Universal Cart Merchant Gate
 
-Paid remote MCP for Universal Cart merchant readiness MCP, structured receipts, audit logs, and reviewer-ready evidence.
+Universal Cart Merchant Gate is a hosted remote MCP for Universal Cart merchant readiness MCP.
 
 Website: https://universalcartmerchantgate.clauxel.com/
+Docs pattern reference: https://github.com/clauxel/MiroFish
+Primary keyword: Universal Cart merchant readiness MCP
+Type: MCP
+Default plan: growth
 MCP endpoint: https://universalcartmerchantgate.clauxel.com/mcp
 Server card: https://universalcartmerchantgate.clauxel.com/server-card.json
-Docs: https://github.com/clauxel/universal-cart-merchant-gate-mcp
-
-Use case: Universal Cart merchant readiness MCP with structured receipts.
-Authentication: Bearer token required for production use.
+Registry name: com.clauxel.universalcartmerchantgate/universalcartmerchantgate-mcp
 Tools: check_universal_cart_readiness, classify_checkout_blocker, explain_offer_gap, issue_agentic_commerce_receipt, export_readiness_log
+
+Public boundary: docs-only repository; no production source code or secrets.
