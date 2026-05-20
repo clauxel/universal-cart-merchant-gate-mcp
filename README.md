@@ -1,49 +1,48 @@
-# Universal Cart Merchant Gate
+# Universal Cart Merchant Gate MCP
 
-Universal Cart Merchant Gate is a hosted remote MCP for Universal Cart merchant readiness MCP.
+Universal Cart merchant readiness MCP with structured receipts.
 
-This repository is a public documentation project for Universal Cart Merchant Gate. Its structure follows the public documentation pattern used by [MiroFish](https://github.com/clauxel/MiroFish): a short front door, a clear reading order, practical guides, reference pages, and a public-safe boundary.
+Paid remote MCP for Universal Cart merchant readiness MCP, structured receipts, audit logs, and reviewer-ready evidence.
 
-## Start Here
+## Public Endpoints
 
-- Website: https://universalcartmerchantgate.clauxel.com/?utm_source=github&utm_medium=documentation&utm_campaign=universalcartmerchantgate_public_docs&utm_content=readme_home
-- Pricing: https://universalcartmerchantgate.clauxel.com/pricing/?utm_source=github&utm_medium=documentation&utm_campaign=universalcartmerchantgate_public_docs&utm_content=readme_pricing
-- Checkout: https://universalcartmerchantgate.clauxel.com/checkout/?utm_source=github&utm_medium=documentation&utm_campaign=universalcartmerchantgate_public_docs&utm_content=readme_checkout
-- Support: support@aigeamy.com
-
-## Remote MCP
-
-- Endpoint: https://universalcartmerchantgate.clauxel.com/mcp
+- Website: https://universalcartmerchantgate.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605
+- MCP endpoint: https://universalcartmerchantgate.clauxel.com/mcp
 - Server card: https://universalcartmerchantgate.clauxel.com/server-card.json
 - Registry name: `com.clauxel.universalcartmerchantgate/universalcartmerchantgate-mcp`
-- Tools: `check_universal_cart_readiness`, `classify_checkout_blocker`, `explain_offer_gap`, `issue_agentic_commerce_receipt`, `export_readiness_log`
 
-## Reading Order
+## Access
 
-1. [Quickstart](guide/quickstart.md)
-2. [Evaluation guide](guide/evaluation.md)
-3. [Checkout and pricing](guide/checkout-and-pricing.md)
-4. [Workflow notes](features/workflow.md)
-5. [Security model](features/security-model.md)
-6. [Public link reference](reference/links.md)
+This is a paid hosted remote MCP. Production calls require a bearer token issued from the product website.
 
-## Audience
+```http
+Authorization: Bearer <token>
+```
 
-commerce teams, merchant operations teams, marketplace owners, and agentic checkout reviewers.
+Unauthenticated browser visits to `/mcp` return a clear JSON error instead of internal details.
 
-## Capabilities
+## Tools
 
-- Streamable HTTP MCP endpoint
-- Bearer-token access for production calls
-- Structured tool-call output
-- Receipt-oriented evidence export
-- Public server card and registry metadata
-- MCP tool: check_universal_cart_readiness
-- MCP tool: classify_checkout_blocker
-- MCP tool: explain_offer_gap
-- MCP tool: issue_agentic_commerce_receipt
-- MCP tool: export_readiness_log
+- `check_universal_cart_readiness`
+- `classify_checkout_blocker`
+- `explain_offer_gap`
+- `issue_agentic_commerce_receipt`
+- `export_readiness_log`
 
-## Public-Safe Boundary
+## Quick Start
 
-This repository contains documentation only. It does not contain production source code, credentials, payment configuration, Cloudflare configuration, customer records, private analytics, or local machine paths.
+1. Open the website and choose a plan.
+2. Create or request an API token.
+3. Add the endpoint to an MCP client that supports Streamable HTTP remote servers.
+4. Send JSON-RPC requests with the bearer token.
+
+## Useful Links
+
+- Product page: https://universalcartmerchantgate.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605
+- Pricing: https://universalcartmerchantgate.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605#pricing
+- Server card: https://universalcartmerchantgate.clauxel.com/server-card.json
+- MCP endpoint: https://universalcartmerchantgate.clauxel.com/mcp
+
+## Status
+
+This repository is a public documentation and directory-submission reference for the hosted service. It does not contain the private production source code.
